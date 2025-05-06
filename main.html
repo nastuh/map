@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Историческая карта Беларуси</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Начальная вставка -->
+    <div id="intro" class="intro">
+        <h1>Дорогами войны: память через поколения</h1>
+        <p>Перед вами карта Беларуси с отмеченными памятными местами. Узнайте больше об истории, кликнув на флажки.<br> Здесь вы сможете увидеть много увлекательных видео от учеников с разных городов.</p>
+        <button id="start-btn">Начать</button>
+    </div>
+
+    <div class="welcome" id="welcome">
+        <h2>Добро пожаловать!</h2>
+        <p>Перед вами карта Беларуси с отмеченными памятными местами. Узнайте больше об истории, кликнув на флажки.</p>
+    </div>
+    <div class="map-container">
+        <img class="map-img" src="belarus-map.png" alt="Карта Беларуси">
+        <!-- Флажки с tooltip -->
+        <button class="flag" style="left: 52%; top: 45%;" data-city="Стела Минск – город-герой" data-video="Стела Минеск - город герой.mp4">
+            <span class="tooltip">Стела Минск – город-герой</span>
+        </button>
+        <button class="flag" style="left: 54%; top: 48%;" data-city="Мачулищи" data-video="Мачулищи.mp4">
+            <span class="tooltip">Мачулищи</span>
+        </button>
+        <button class="flag" style="left: 53%; top: 44%;" data-city="Зеленый Бор" data-video="Зеленый Бор.mp4">
+            <span class="tooltip">Зеленый Бор</span>
+        </button>
+        <button class="flag" style="left: 56%; top: 42%;" data-city="Жодино" data-video="Жодино.mp4">
+            <span class="tooltip">Жодино</span>
+        </button>
+        <button class="flag" style="left: 50%; top: 40%;" data-city="Молодечно" data-video="Молодечно.mp4">
+            <span class="tooltip">Молодечно</span>
+        </button>
+        <button class="flag" style="left: 55%; top: 47%;" data-city="Хатынь" data-video="Хатынь.mp4">
+            <span class="tooltip">Хатынь</span>
+        </button>
+        <button class="flag" style="left: 52%; top: 46%;" data-city="Площадь Победы" data-video="Площадь Победы.mp4">
+            <span class="tooltip">Площадь Победы</span>
+        </button>
+        <button class="flag" style="left: 51%; top: 47%;" data-city="Мемориал Память (Петровщина)" data-video="Мемориальная память (Петровщина).MP4">
+            <span class="tooltip">Мемориал Память (Петровщина)</span>
+        </button>
+        <button class="flag" style="left: 71.7%; top: 87.2%;" data-city="Хойники" data-video="https://www.youtube.com/embed/fbQ8sTD9ot4?si=CU152cTL0xdT-vkT">
+            <span class="tooltip">Хойники</span>
+        </button>
+        <button class="flag" style="left: 28.3%; top: 53.5%;" data-city="Новогрудок" data-video="Новогрудок.MP4">
+            <span class="tooltip">Новогрудок</span>
+        </button>
+        <button class="flag" style="left: 28.4%; top: 75.3%;" data-city="Телеханы" data-video="Телеханы.MP4">
+            <span class="tooltip">Телеханы</span>
+        </button>
+        <button class="flag" style="left: 38.55%; top: 80.7%;" data-city="Лунинец" data-video="Лунинец.MP4">
+            <span class="tooltip">Лунинец</span>
+        </button>
+        <button class="flag" style="left: 51%; top: 60%;" data-city="Тростенец" data-video="Тростенец.mp4">
+            <span class="tooltip">Тростенец</span>
+        </button>
+        <button class="flag" style="left: 41.7%; top: 51.5%;" data-city="Дзержинск" data-video="Дзержинск.MP4">
+            <span class="tooltip">Дзержинск</span>
+        </button>
+        <button class="flag" style="left: 55%; top: 38%;" data-city="Логойск" data-video="Логойск.mp4">
+            <span class="tooltip">Логойск</span>
+        </button>
+        <button class="flag" style="left: 63.4%; top: 62%;" data-city="Бобруйск" data-video="Бобруйск.MP4">
+            <span class="tooltip">Бобруйск</span>
+        </button>
+        <button class="flag" style="left: 45%; top: 35%;" data-city="Сморгонь" data-video="Сморгонь.MP4">
+            <span class="tooltip">Сморгонь</span>
+        </button>
+        <button class="flag" style="left: 53%; top: 48%;" data-city="Мемориал Яма (Минск)" data-video="Мемориал Яма (Минск).mp4">
+            <span class="tooltip">Мемориал Яма (Минск)</span>
+        </button>
+    </div>
+
+    <!-- Модальное окно для видео -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="close" class="close">&times;</span>
+            <h2 id="city-title"></h2>
+            <iframe id="video-frame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
