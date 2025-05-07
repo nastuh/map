@@ -60,7 +60,7 @@ body {
     width: 100%;
     display: block;
     border-radius: 10px;
-    box-shadow: 0 0 10px #aaa;
+    /* box-shadow: 0 0 10px #aaa; */
 }
 
 .flag {
@@ -141,4 +141,17 @@ body {
 }
 .map-img{
     width: 100%;
+    
+   
+}
+.vov{
+    display: block;
+     position: absolute;
+    top: 7%;
+    left: 1%;
+    width:15%;
+    height: 25%;
+}
+body{background-image: 
+ url(вов.png);
 }
