@@ -3,13 +3,17 @@ body {
     background: #f5f5f5;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
 }
 
 .intro {
     position: fixed;
     z-index: 100;
     left: 0; top: 0; width: 100vw; height: 100vh;
-    background-image: url('background.png');
+    background-image: url('resources/background.png');
     color: #fff;
     display: flex;
     margin: 0;
@@ -52,8 +56,10 @@ body {
 
 .map-container {
     position: relative;
-    width: 800px;
+    width: auto;
     margin: 0 auto;
+    margin-bottom: 10vh;
+    max-width: 1000px;
 }
 
 .map-img {
@@ -107,7 +113,7 @@ body {
     position: absolute;
     width: 32px;
     height: 32px;
-    background: url('flag.png') no-repeat center/contain;
+    background: url('resources/flag.png') no-repeat center/contain;
     border: none;
     cursor: pointer;
     transform: translate(-50%, -100%);
@@ -146,12 +152,67 @@ body {
 }
 .vov{
     display: block;
-     position: absolute;
+    position: absolute;
     top: 7%;
     left: 1%;
     width:15%;
     height: 25%;
+    object-fit: contain;
 }
+
 body{background-image: 
- url(вов.png);
+ url('resources/вов.png');
+}
+
+.modal-button {
+    display: block;
+    width: 90%;
+    height: 50px;
+    background-color: #2e7d32;
+    border: none;
+    margin-bottom: 5px;
+    border-radius: 20px;
+    text-align: center;
+    color: white;
+    transition: all 150ms;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.modal-button:hover {
+    transform: scale(1.01);
+}
+
+.modal-button:active {
+    box-shadow: 0px 0px 5px black;
+}
+
+footer {
+    background:  #2F6B2F;
+    background: linear-gradient(0deg,rgba(47, 107, 47, 1) 0%, rgba(35, 161, 35, 1) 100%);
+    height: fit-content;
+    text-align: center;
+    bottom: 0px;
+    padding: 20px;
+    color: white
+}
+
+.social-link {
+    color: rgb(44 46 175);
+    text-decoration: none;
+    margin: 0 10px 0 10px;
+    transition: all 150ms;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.social-link:hover {
+    color: rgb(207, 208, 255);
+}
+
+@media only screen and (max-height: 600px) {
+    .map-container {
+        margin-bottom: 55vh;
+    }
+    
 }

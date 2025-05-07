@@ -28,12 +28,36 @@ window.onclick = function(event) {
     }
 };
 
-document.querySelectorAll('.flags').forEach(flags => {
-    flag.addEventListener('click', function() {
+var handler = function() {
+    const city = this.getAttribute('data-city');
+    const video = this.getAttribute('data-video');
+    document.getElementById('city-title').textContent = city;
+    document.getElementById('video-frame').src = video + "?autoplay=1";
+    document.getElementById('modal').style.display = 'flex';
+};
+
+document.querySelectorAll('.flags').forEach(flag => {
+    flag.addEventListener('click', handler);
+});
+
+var minskButton =  document.getElementById('minskButton'); 
+
+minskButton.removeEventListener('click', handler);
+minskButton.onclick = function() {
+    document.getElementById('modalCities').style.display = 'flex';
+};
+
+document.getElementById('closeCitites').onclick = function() {
+    document.getElementById('modalCities').style.display = 'none';
+};
+
+for (let item of document.getElementsByClassName('modal-button')) {
+    item.addEventListener('click', function() {
         const city = this.getAttribute('data-city');
         const video = this.getAttribute('data-video');
+        document.getElementById('modalCities').style.display = 'none';
         document.getElementById('city-title').textContent = city;
         document.getElementById('video-frame').src = video + "?autoplay=1";
         document.getElementById('modal').style.display = 'flex';
     });
-});
+}

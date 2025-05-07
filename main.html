@@ -21,32 +21,15 @@
         <p style="color: beige;">Перед вами карта Беларуси с отмеченными памятными местами. Узнайте больше об истории, кликнув на флажки.</p>
     </div>
     <div class="map-container">
-        <img class="map-img" src="belarus-map.png" alt="Карта Беларуси">
+        <img class="map-img" src="resources/belarus-map.png" alt="Карта Беларуси">
         <!-- Флажки с tooltip -->
-        <!-- <button class="flag" style="left: 52%; top: 45%;" data-city="Стела Минск – город-герой" data-video="Стела Минеск - город герой.mp4">
-            <span class="tooltip">Стела Минск – город-герой</span>
-        </button> -->
-        <!-- <button class="flag" style="left: 54%; top: 48%;" data-city="Мачулищи" data-video="Мачулищи.mp4">
-            <span class="tooltip">Мачулищи</span>
-        </button>-->
-        <!-- <button class="flag" style="left: 53%; top: 44%;" data-city="Зеленый Бор" data-video="Зеленый Бор.mp4">
-            <span class="tooltip">Зеленый Бор</span>
-        </button> -->
         <button class="flag" style="left: 53.3%; top: 42.5%;" data-city="Жодино" data-video="Жодино.mp4">
             <span class="tooltip">Жодино</span>
         </button>
         <button class="flag" style="left: 38.6%; top: 38.7%;" data-city="Молодечно" data-video="Молодечно.mp4">
             <span class="tooltip">Молодечно</span>
         </button>
-        <!-- <button class="flag" style="left: 55%; top: 47%;" data-city="Хатынь" data-video="Хатынь.mp4">
-            <span class="tooltip">Хатынь</span>
-        </button> -->
-        <!-- <button class="flag" style="left: 52%; top: 46%;" data-city="Площадь Победы" data-video="Площадь Победы.mp4">
-            <span class="tooltip">Площадь Победы</span>
-        </button> -->
-        <!-- <button class="flag" style="left: 51%; top: 47%;" data-city="Мемориал Память (Петровщина)" data-video="Мемориальная память (Петровщина).MP4">
-            <span class="tooltip">Мемориал Память (Петровщина)</span>
-        </button> -->
+
         <button class="flag" style="left: 71.7%; top: 87.2%;" data-city="Хойники" data-video="хойники.mp4">
             <span class="tooltip">Хойники</span>
         </button>
@@ -59,9 +42,6 @@
         <button class="flag" style="left: 38.55%; top: 80.7%;" data-city="Лунинец" data-video="Лунинец.MP4">
             <span class="tooltip">Лунинец</span>
         </button>
-        <!-- <button class="flag" style="left: 51%; top: 45%;" data-city="Тростенец" data-video="Тростенец.mp4">
-            <span class="tooltip">Тростенец</span>
-        </button> -->
         <button class="flag" style="left: 41.7%; top: 51.5%;" data-city="Дзержинск" data-video="Дзержинск.MP4">
             <span class="tooltip">Дзержинск</span>
         </button>
@@ -77,24 +57,9 @@
         <button class="flag" style="left: 31%; top: 83.5%;" data-city="Пинск" data-video="пинск.MP4">
             <span class="tooltip">Пинск</span>
         </button>
-        <!-- <button class="flag" style="left: 53%; top: 48%;" data-city="Мемориал Яма (Минск)" data-video="Мемориал Яма (Минск).mp4">
-            <span class="tooltip">Мемориал Яма (Минск)</span>
-        </button> -->
-        <button class="flags" style="left: 47.3%; top: 47%;" data-city="Минск"></button>
+
+        <button class="flags" id="minskButton" style="left: 47.3%; top: 47%;" data-city="Минск"></button>
     </div>
-
-
-    <button class="button" id="openMainModal">Открыть модальное окно</button>
-
-    <div id="mainModal" class="modal">
-        <div class="modal-content">
-            <span class="close" id="closeMain">&times;</span>
-            <h2>Это главное модальное окно</h2>
-            <button class="button" id="openModal1">Открыть модальное окно 1</button>
-            <button class="button" id="openModal2">Открыть модальное окно 2</button>
-        </div>
-    </div>
-
 
     <!-- Модальное окно для видео -->
     <div id="modal" class="modal">
@@ -102,15 +67,67 @@
             <span id="close" class="close">&times;</span>
             <h2 id="city-title"></h2>
             <iframe id="video-frame" width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
 
+    <!-- Модальное окно для городов (МИНСК ЛОЛ)-->
+    <div id="modalCities" class="modal">
+        <div class="modal-content">
+            <span id="closeCitites" class="close">&times;</span>
+            <div style="height: 400px;overflow-y: auto;overflow-x: hidden;display: flex;flex-wrap: wrap;justify-content: center;width: 500px;">
+                <button class="modal-button" data-city="Стела Минск – город-герой" data-video="Стела Минеск - город герой.mp4">
+                    Стела Минск – город-герой
+                </button> 
+                 <button class="modal-button" data-city="Мачулищи" data-video="Мачулищи.mp4">
+                    Мачулищи
+                </button>
+                 <button class="modal-button" data-city="Зеленый Бор" data-video="Зеленый Бор.mp4">
+                    Зеленый Бобруйск
+                </button>
+                 <button class="modal-button" data-city="Мемориал Яма (Минск)" data-video="Мемориал Яма (Минск).mp4">
+                    Мемориал Яма (Минск)
+                </button> 
+                <button class="modal-button" data-city="Тростенец" data-video="Тростенец.mp4">
+                    Тростенец
+                </button> 
+                <button class="modal-button" data-city="Хатынь" data-video="Хатынь.mp4">
+                    Хатынь
+                </button> 
+                <button class="modal-button" data-city="Площадь Победы" data-video="Площадь Победы.mp4">
+                    Площадь Победы
+                </button> 
+                <button class="modal-button" data-city="Мемориал Память (Петровщина)" data-video="Мемориальная память (Петровщина).MP4">
+                    Мемориал Память (Петровщина)
+                </button> 
+                <button class="modal-button" data-city="Стела Минск – город-герой" data-video="Стела Минеск - город герой.mp4">
+                    Стела Минск – город-герой
+                </button> 
+                <button class="modal-button" data-city="Мачулищи" data-video="Мачулищи.mp4">
+                    Мачулищи
+                </button>
+                <button class="modal-button" data-city="Зеленый Бор" data-video="Зеленый Бор.mp4">
+                    Зеленый Бор
+                </button> 
+            </div>
         </div>
     </div>
     
     <!--Логотип 80 лет -->
-    <div class="logo-VOV">
-        <img  class="vov" src="лого 80 лет (рус, PNG).png" alt="">
+    <div class="logo-VOV" style="flex: 1;">
+        <img  class="vov" src="resources/лого 80 лет (рус, PNG).png" alt="">
     </div>
    
+
+    <footer>
+        <h3>Мы в социальных сетях</h3>
+        <a class="social-link" href="hhttps://t.me/mrkchannelofficial" target="_blank">Telegram</a>
+        <a class="social-link" href="https://mrk.bsuir.by/ru/" target="_blank">Website</a>
+        <a class="social-link" href="https://www.instagram.com/mrk_bsuir.by/" target="_blank">Instagram</a>
+        <a class="social-link" href="https://www.youtube.com/@user-jw9pb7kx1f" target="_blank">YouTube</a>
+        <a class="social-link" href="https://vk.com/offmrc" target="_blank">VK</a>
+        <p>© БГУИР филиал МРК, 2025</p>
+        <p>Контактная информация: shatalova@bsuir.by</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
