@@ -27,3 +27,13 @@ window.onclick = function(event) {
         document.getElementById('video-frame').src = '';
     }
 };
+
+document.querySelectorAll('.flags').forEach(flags => {
+    flag.addEventListener('click', function() {
+        const city = this.getAttribute('data-city');
+        const video = this.getAttribute('data-video');
+        document.getElementById('city-title').textContent = city;
+        document.getElementById('video-frame').src = video + "?autoplay=1";
+        document.getElementById('modal').style.display = 'flex';
+    });
+});
