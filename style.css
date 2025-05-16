@@ -162,6 +162,9 @@ body {
 
 body{background-image: 
  url('resources/вов.png');
+ background-color: aquamarine;
+ 
+ 
 }
 
 .modal-button {
@@ -188,8 +191,7 @@ body{background-image:
 }
 
 footer {
-    background:  #2F6B2F;
-    background: linear-gradient(0deg,rgba(47, 107, 47, 1) 0%, rgba(35, 161, 35, 1) 100%);
+   background: -webkit-linear-gradient(90deg, #b07736,#8e6639,#7c5d31);/* Chrome 10-25, Safari 5.1-6 */                                                         ;
     height: fit-content;
     text-align: center;
     bottom: 0px;
@@ -198,12 +200,9 @@ footer {
 }
 
 .social-link {
-    color: rgb(44 46 175);
     text-decoration: none;
     margin: 0 10px 0 10px;
     transition: all 150ms;
-    font-size: 16px;
-    font-weight: bold;
 }
 
 .social-link:hover {
@@ -215,4 +214,25 @@ footer {
         margin-bottom: 55vh;
     }
     
+}
+.social-link-vk{
+    width: 2%;
+    height: 2%;
+}
+.social-link-inst{
+    width: 2%;
+    height: 2%;
+}
+.social-link-mrk{
+    width: 2%;
+    height: 2%;
+}
+.social-link-telegram{
+    width: 2%;
+    height: 2%;
+}
+.social-link-youtube{
+    margin-top: 1px;
+    width: 2.2%;
+    height: 2.2%;
 }
